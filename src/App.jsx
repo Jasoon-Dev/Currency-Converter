@@ -48,11 +48,11 @@ function App() {
 
   return (
     <div className={`${darkMode ? "bg-gray-900 text-white" : "bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 text-gray-900"} min-h-screen flex flex-col`}>
-      
+
       {/* Header/Navbar */}
       <header className={`${darkMode ? "bg-gray-800 text-white" : "bg-white text-gray-900"} shadow-md py-4 px-6 sticky top-0 z-50`}>
         <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <Link to="/" className="text-2xl font-extrabold text-indigo-600 cursor-pointer" >💱 Converter</Link>
+          <Link to="/" className="text-2xl font-extrabold text-indigo-600 cursor-pointer">💱 Converter</Link>
           <nav className="hidden md:flex gap-6 font-medium">
             <Link to="/" className="hover:text-indigo-400">Home</Link>
             <Link to="/about" className="hover:text-indigo-400">About</Link>
@@ -63,10 +63,7 @@ function App() {
             <button className="md:hidden focus:outline-none" onClick={() => setMenuOpen(!menuOpen)}>
               {menuOpen ? "✖" : "☰"}
             </button>
-            <button
-              className="p-2 rounded-full bg-gray-200 dark:bg-gray-700"
-              onClick={toggleDarkMode}
-            >
+            <button className="p-2 rounded-full bg-gray-200 dark:bg-gray-700" onClick={toggleDarkMode}>
               {darkMode ? "☀️" : "🌙"}
             </button>
           </div>
@@ -84,11 +81,11 @@ function App() {
 
       {/* Routes */}
       <Routes>
+        {/* Home/Converter */}
         <Route path="/" element={
           <main className="flex-grow">
-
             {/* Hero Section */}
-            <section id="home" className="flex flex-col items-center text-center py-20">
+            <section id="home" className="flex flex-col items-center text-center py-20 text-amber-50">
               <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
                 Fast & Simple Currency Converter
               </h2>
@@ -115,7 +112,6 @@ function App() {
                   />
                 </div>
 
-                {/* From/To with Swap in Between */}
                 <div className="flex items-center gap-2 mb-6">
                   <div className="flex-1">
                     <label className="block mb-2 font-medium">From</label>
@@ -128,11 +124,7 @@ function App() {
                     </select>
                   </div>
 
-                  {/* Swap Button */}
-                  <button
-                    onClick={swapCurrencies}
-                    className="p-3 bg-indigo-500 text-white rounded-full mt-7 hover:bg-indigo-600 transition"
-                  >
+                  <button onClick={swapCurrencies} className="p-3 bg-indigo-500 text-white rounded-full mt-7 hover:bg-indigo-600 transition">
                     ⇅
                   </button>
 
@@ -148,7 +140,6 @@ function App() {
                   </div>
                 </div>
 
-                {/* Result */}
                 <div className="text-center mt-8 text-2xl font-bold">
                   {result && (
                     <>
@@ -161,9 +152,11 @@ function App() {
             </section>
           </main>
         } />
-        <Route path="/about" element={<About />} />
-        <Route path="/privacy" element={<Privacy />} />
-        <Route path="/feedback" element={<Feedback />} />
+
+        {/* About, Privacy, Feedback */}
+        <Route path="/about" element={<About darkMode={darkMode} />} />
+        <Route path="/privacy" element={<Privacy darkMode={darkMode} />} />
+        <Route path="/feedback" element={<Feedback darkMode={darkMode} />} />
       </Routes>
 
       {/* Footer */}
