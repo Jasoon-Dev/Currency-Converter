@@ -69,7 +69,7 @@
             </div>
           </div>
           {menuOpen && (
-            <div className="md:hidden mt-4 space-y-2 px-6">
+            <div className="md:hidden mt-4 space-y-2 px-6 text-center">
               <Link to="/" className="block hover:text-indigo-400">Home</Link>
               <Link to="/about" className="block hover:text-indigo-400">About</Link>
               <Link to="/privacy" className="block hover:text-indigo-400">Privacy Policy</Link>
