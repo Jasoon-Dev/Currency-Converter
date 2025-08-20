@@ -178,7 +178,7 @@
                       </p>
                     </div>
                     <Link
-                      to="/bmi-calculator"
+                      to=""
                       className="mt-4 inline-block px-4 py-2 bg-white text-fuchsia-600 font-bold rounded-full hover:bg-gray-200 transition"
                     >
                     Coming Soon
@@ -193,7 +193,7 @@
                       </p>
                     </div>
                     <Link
-                      to="/bmi-calculator"
+                      to=""
                       className="mt-4 inline-block px-4 py-2 bg-white text-amber-600 font-bold rounded-full hover:bg-gray-200 transition"
                     >
                       Coming Soon
@@ -208,7 +208,7 @@
                       </p>
                     </div>
                     <Link
-                      to="/bmi-calculator"
+                      to=""
                       className="mt-4 inline-block px-4 py-2 bg-white text-green-600 font-bold rounded-full hover:bg-gray-200 transition"
                     >
                       Coming Soon
@@ -224,7 +224,7 @@
                       </p>
                     </div>
                     <Link
-                      to="/bmi-calculator"
+                      to=""
                       className="mt-4 inline-block px-4 py-2 bg-white text-blue-600 font-bold rounded-full hover:bg-gray-200 transition"
                     >
                       Coming Soon
@@ -256,7 +256,7 @@
                       </p>
                     </div>
                     <Link
-                      to="/loan-calculator"
+                      to=""
                       className="mt-4 inline-block px-4 py-2 bg-white text-pink-600 font-bold rounded-full hover:bg-gray-200 transition"
                     >
                       Coming Soon
@@ -272,7 +272,7 @@
                       </p>
                     </div>
                     <Link
-                      to="/tip-calculator"
+                      to=""
                       className="mt-4 inline-block px-4 py-2 bg-white text-yellow-600 font-bold rounded-full hover:bg-gray-200 transition"
                     >
                       Coming Soon
@@ -288,7 +288,7 @@
                       </p>
                     </div>
                     <Link
-                      to="/bmi-calculator"
+                      to=""
                       className="mt-4 inline-block px-4 py-2 bg-white text-purple-600 font-bold rounded-full hover:bg-gray-200 transition"
                     >
                       Coming Soon
@@ -303,7 +303,7 @@
                       </p>
                     </div>
                     <Link
-                      to="/loan-calculator"
+                      to=""
                       className="mt-4 inline-block px-4 py-2 bg-white text-lime-600 font-bold rounded-full hover:bg-gray-200 transition"
                     >
                       Coming Soon
@@ -319,7 +319,7 @@
                       </p>
                     </div>
                     <Link
-                      to="/tip-calculator"
+                      to=""
                       className="mt-4 inline-block px-4 py-2 bg-white text-orange-600 font-bold rounded-full hover:bg-gray-200 transition"
                     >
                       Coming Soon
@@ -335,7 +335,7 @@
                       </p>
                     </div>
                     <Link
-                      to="/bmi-calculator"
+                      to=""
                       className="mt-4 inline-block px-4 py-2 bg-white text-teal-600 font-bold rounded-full hover:bg-gray-200 transition"
                     >
                       Coming Soon
@@ -350,7 +350,7 @@
                       </p>
                     </div>
                     <Link
-                      to="/bmi-calculator"
+                      to=""
                       className="mt-4 inline-block px-4 py-2 bg-white text-gray-600 font-bold rounded-full hover:bg-gray-200 transition"
                     >
                       Coming Soon
