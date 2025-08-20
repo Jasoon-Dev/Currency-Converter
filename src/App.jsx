@@ -5,6 +5,7 @@
   import Privacy from "./pages/Privacy";
   import Feedback from "./pages/Feedback";
 
+
   function App() {
     const [currencies, setCurrencies] = useState([]);
     const [from, setFrom] = useState("USD");
@@ -13,6 +14,8 @@
     const [result, setResult] = useState(null);
     const [menuOpen, setMenuOpen] = useState(false);
     const [darkMode, setDarkMode] = useState(false);
+
+    
 
     useEffect(() => {
       axios.get("https://open.er-api.com/v6/latest/USD").then((res) => {
@@ -48,7 +51,7 @@
 
     return (
       <div className={`${darkMode ? "bg-gray-900 text-white" : "bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 text-gray-900"} min-h-screen flex flex-col`}>
-
+        
         {/* Header/Navbar */}
         <header className={`${darkMode ? "bg-gray-800 text-white" : "bg-white text-gray-900"} shadow-md py-4 px-6 sticky top-0 z-50`}>
           <div className="max-w-6xl mx-auto flex justify-between items-center">
@@ -84,15 +87,18 @@
           <Route path="/" element={
             <main className="flex-grow">
               {/* Hero Section */}
-              <section id="home" className="flex flex-col items-center text-center py-20 text-amber-50">
-                <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
-                  Fast & Simple Currency Converter
-                </h2>
-                <p className="text-lg md:text-xl max-w-2xl">
-                  Get real-time exchange rates instantly. Convert between 100+ currencies with ease, right in your browser.
-                </p>
+              <section
+                  id="home"
+                  className="hidden md:flex flex-col items-center text-center py-20 text-amber-50">
+                  <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
+                    Fast & Simple Currency Converter
+                  </h2>
+                  <p className="text-lg md:text-xl max-w-2xl">
+                    Get real-time exchange rates instantly. Convert between 100+ currencies with
+                    ease, right in your browser.
+                  </p>
               </section>
-
+              
               {/* Converter Section */}
               <section className="flex items-center justify-center px-4 py-12" id="converter">
                 <div className={`shadow-2xl rounded-2xl p-8 w-full max-w-md ${darkMode ? "bg-gray-800 text-white" : "bg-white"}`}>
@@ -146,6 +152,209 @@
                         <span className="text-indigo-600">{result} {to}</span>
                       </>
                     )}
+                  </div>
+                </div>
+              </section>
+              
+                      {/* More Tools Section 1*/}
+              <section className="py-12 px-4">
+                <div className="max-w-6xl mx-auto text-center mb-8">
+                  <h2 className="text-3xl font-extrabold mb-4  text-white">
+                    More Tools
+                  </h2>
+                  <p className=" text-white">
+                    Explore our other useful tools to make your life easier.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+
+                  {/* BMI Calculator 2*/}
+                  <div className="p-6 rounded-2xl shadow-lg hover:shadow-xl transition text-center text-white bg-gradient-to-br from-fuchsia-400 via-fuchsia-500 to-fuchsia-600 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-xl font-bold mb-2">Grade Calculator | GPA Tracker</h3>
+                      <p className="mb-4">
+                        Teachers can quickly calculate grades for students. Can also allow students to track their own grades.
+                      </p>
+                    </div>
+                    <Link
+                      to="/bmi-calculator"
+                      className="mt-4 inline-block px-4 py-2 bg-white text-fuchsia-600 font-bold rounded-full hover:bg-gray-200 transition"
+                    >
+                    Coming Soon
+                    </Link>
+                  </div>
+                  {/* BMI Calculator 3*/}
+                  <div className="p-6 rounded-2xl shadow-lg hover:shadow-xl transition text-center text-white bg-gradient-to-br from-amber-400 via-amber-500 to-amber-600 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-xl font-bold mb-2">Quiz & Assignment Generator</h3>
+                      <p className="mb-4">
+                        Teachers input topics, and generates random multiple-choice or short-answer questions.
+                      </p>
+                    </div>
+                    <Link
+                      to="/bmi-calculator"
+                      className="mt-4 inline-block px-4 py-2 bg-white text-amber-600 font-bold rounded-full hover:bg-gray-200 transition"
+                    >
+                      Coming Soon
+                    </Link>
+                  </div>
+                  {/* BMI Calculator 4*/}
+                  <div className="p-6 rounded-2xl shadow-lg hover:shadow-xl transition text-center text-white bg-gradient-to-br from-green-400 via-green-500 to-green-600 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-xl font-bold mb-2">Homework | Assignment Submission Portal</h3>
+                      <p className="mb-4">
+                        A simple portal where students can upload assignments / homeworks and teachers can check them anytime.
+                      </p>
+                    </div>
+                    <Link
+                      to="/bmi-calculator"
+                      className="mt-4 inline-block px-4 py-2 bg-white text-green-600 font-bold rounded-full hover:bg-gray-200 transition"
+                    >
+                      Coming Soon
+                    </Link>
+                  </div>
+                  
+                  {/* BMI Calculator 5*/}
+                  <div className="p-6 rounded-2xl shadow-lg hover:shadow-xl transition text-center text-white bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-xl font-bold mb-2">Random Group Generator</h3>
+                      <p className="mb-4">
+                        Teachers can input a list of students, and it randomly creates groups for projects or activities.
+                      </p>
+                    </div>
+                    <Link
+                      to="/bmi-calculator"
+                      className="mt-4 inline-block px-4 py-2 bg-white text-blue-600 font-bold rounded-full hover:bg-gray-200 transition"
+                    >
+                      Coming Soon
+                    </Link>
+                  </div>
+
+                  {/* Unit Converter 6*/}
+                  <div className="p-6 rounded-2xl shadow-lg hover:shadow-xl transition text-center text-white bg-gradient-to-br from-cyan-400 via-cyan-500 to-cyan-600 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-xl font-bold mb-2">Unit Converter</h3>
+                      <p className="mb-4">
+                        Convert between hundreds of units across 30+ categories with precision and ease like length, weight, temperature, and more.
+                      </p>
+                    </div>
+                    <Link
+                      to="https://unitconverterjs.vercel.app/"
+                      className="mt-4 inline-block px-4 py-2 bg-white text-cyan-600 font-bold rounded-full hover:bg-gray-200 transition"
+                    >
+                      Try Now
+                    </Link>
+                  </div>
+
+                  {/* Loan Calculator 7*/}
+                  <div className="p-6 rounded-2xl shadow-lg hover:shadow-xl transition text-center text-white bg-gradient-to-br from-pink-400 via-pink-500 to-pink-600 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-xl font-bold mb-2">Scientific Calculator</h3>
+                      <p className="mb-4">
+                        Perform advanced mathematical calculations quickly and accurately in one easy tool.
+                      </p>
+                    </div>
+                    <Link
+                      to="/loan-calculator"
+                      className="mt-4 inline-block px-4 py-2 bg-white text-pink-600 font-bold rounded-full hover:bg-gray-200 transition"
+                    >
+                      Coming Soon
+                    </Link>
+                  </div>
+
+                  {/* Tip Calculator 8*/}
+                  <div className="p-6 rounded-2xl shadow-lg hover:shadow-xl transition text-center text-white bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-xl font-bold mb-2">PDF | WORD | EXCEL | PPT | IMG Conversion</h3>
+                      <p className="mb-4">
+                        PDF ⇆ Word | PDF ⇆ Excel | PDF ⇆ PowerPoint | PDF ⇆ Image | Word ⇆ PDF | Excel ⇆ PDF | PowerPoint ⇆ PDF
+                      </p>
+                    </div>
+                    <Link
+                      to="/tip-calculator"
+                      className="mt-4 inline-block px-4 py-2 bg-white text-yellow-600 font-bold rounded-full hover:bg-gray-200 transition"
+                    >
+                      Coming Soon
+                    </Link>
+                  </div>
+
+                  {/* BMI Calculator 9*/}
+                  <div className="p-6 rounded-2xl shadow-lg hover:shadow-xl transition text-center text-white bg-gradient-to-br from-purple-400 via-purple-500 to-purple-600 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-xl font-bold mb-2">Name Picker</h3>
+                      <p className="mb-4">
+                        Quickly pick a random name from a list for draws, raffles, or classroom activities.
+                      </p>
+                    </div>
+                    <Link
+                      to="/bmi-calculator"
+                      className="mt-4 inline-block px-4 py-2 bg-white text-purple-600 font-bold rounded-full hover:bg-gray-200 transition"
+                    >
+                      Coming Soon
+                    </Link>
+                  </div>
+                  {/* Loan Calculator 10*/}
+                  <div className="p-6 rounded-2xl shadow-lg hover:shadow-xl transition text-center text-white bg-gradient-to-br from-lime-400 via-lime-500 to-lime-600 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-xl font-bold mb-2">Password Generator</h3>
+                      <p className="mb-4">
+                        Create strong, secure, and random passwords to protect your accounts. Ensure your online safety with unique passwords generated in seconds.
+                      </p>
+                    </div>
+                    <Link
+                      to="/loan-calculator"
+                      className="mt-4 inline-block px-4 py-2 bg-white text-lime-600 font-bold rounded-full hover:bg-gray-200 transition"
+                    >
+                      Coming Soon
+                    </Link>
+                  </div>
+
+                  {/* Tip Calculator 11*/}
+                  <div className="p-6 rounded-2xl shadow-lg hover:shadow-xl transition text-center text-white bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-xl font-bold mb-2">Loan Calculator</h3>
+                      <p className="mb-4">
+                        Easily estimate your monthly loan payments with our Loan Calculator. Plan your finances better by calculating interest, total cost, and repayment schedules.
+                      </p>
+                    </div>
+                    <Link
+                      to="/tip-calculator"
+                      className="mt-4 inline-block px-4 py-2 bg-white text-orange-600 font-bold rounded-full hover:bg-gray-200 transition"
+                    >
+                      Coming Soon
+                    </Link>
+                  </div>
+
+                  {/* BMI Calculator 12*/}
+                  <div className="p-6 rounded-2xl shadow-lg hover:shadow-xl transition text-center text-white bg-gradient-to-br from-teal-400 via-teal-500 to-teal-600 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-xl font-bold mb-2">QR Code Generator</h3>
+                      <p className="mb-4">
+                        Create custom QR codes instantly with our QR Code Generator. Share links, text, or contact details in a fast and scannable way.
+                      </p>
+                    </div>
+                    <Link
+                      to="/bmi-calculator"
+                      className="mt-4 inline-block px-4 py-2 bg-white text-teal-600 font-bold rounded-full hover:bg-gray-200 transition"
+                    >
+                      Coming Soon
+                    </Link>
+                  </div>
+                  {/* BMI Calculator 13*/}
+                  <div className="p-6 rounded-2xl shadow-lg hover:shadow-xl transition text-center text-white bg-gradient-to-br from-gray-400 via-gray-500 to-gray-600 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-xl font-bold mb-2">Electric Bill Calculator</h3>
+                      <p className="mb-4">
+                        Quickly estimate your monthly electricity costs with our Electric Bill Calculator. Enter your usage and rates to see how much you’ll need to pay.
+                      </p>
+                    </div>
+                    <Link
+                      to="/bmi-calculator"
+                      className="mt-4 inline-block px-4 py-2 bg-white text-gray-600 font-bold rounded-full hover:bg-gray-200 transition"
+                    >
+                      Coming Soon
+                    </Link>
                   </div>
                 </div>
               </section>
