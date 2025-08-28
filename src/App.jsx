@@ -342,7 +342,7 @@
                     </Link>
                   </div>
                   {/* BMI Calculator 12*/}
-                  <div className="p-6 rounded-2xl shadow-lg hover:shadow-xl transition text-center text-white bg-gradient-to-brfrom-gray-400 via-gray-500 to-gray-600  flex flex-col justify-between">
+                  <div className="p-6 rounded-2xl shadow-lg hover:shadow-xl transition text-center text-white bg-gradient-to-br from-gray-400 via-gray-500 to-gray-600  flex flex-col justify-between">
                     <div>
                       <h3 className="text-xl font-bold mb-2">Electric Bill Calculator</h3>
                       <p className="mb-4">
